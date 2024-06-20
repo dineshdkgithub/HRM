@@ -21,6 +21,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -119,6 +120,10 @@ return data;
         actions.sendKeys(Keys.DOWN).build().perform();
         actions.sendKeys(Keys.ENTER).build().perform();
 
+    }
+    @AfterSuite
+    public void close() {
+    	driver.close();
     }
 
 }
