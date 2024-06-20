@@ -123,7 +123,7 @@ return data;
     }
     @AfterSuite
     public void close() {
-    	driver.close();
+    	//driver.close();
     }
 
 }
