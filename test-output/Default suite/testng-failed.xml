@@ -5,7 +5,7 @@
     <classes>
       <class name="HRM.hrm.HR_Administration">
         <methods>
-          <include name="Add_Employee" invocation-numbers="0"/>
+          <include name="Add_Employee"/>
           <include name="close"/>
         </methods>
       </class> <!-- HRM.hrm.HR_Administration -->

@@ -2,62 +2,40 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-20T18:08:48 IST" name="Default suite" finished-at="2024-06-20T18:09:37 IST" duration-ms="48812">
+  <suite started-at="2024-06-22T19:14:06 IST" name="Default suite" finished-at="2024-06-22T19:14:57 IST" duration-ms="50361">
     <groups>
     </groups>
-    <test started-at="2024-06-20T18:08:48 IST" name="Default test" finished-at="2024-06-20T18:09:37 IST" duration-ms="48812">
+    <test started-at="2024-06-22T19:14:06 IST" name="Default test" finished-at="2024-06-22T19:14:57 IST" duration-ms="50361">
       <class name="HRM.hrm.HR_Administration">
-        <test-method signature="Login(java.util.Map)[pri:1, instance:HRM.hrm.HR_Administration@7e6ef134]" started-at="2024-06-20T18:08:49 IST" name="Login" data-provider="HRM" finished-at="2024-06-20T18:09:10 IST" duration-ms="20794" status="PASS">
+        <test-method signature="Login(java.util.Map)[pri:1, instance:HRM.hrm.HR_Administration@5a18cd76]" started-at="2024-06-22T19:14:11 IST" name="Login" data-provider="HRM" finished-at="2024-06-22T19:14:56 IST" duration-ms="44799" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Test Case=Valid data, Username=admin, Password=OVw3Vd@A6s}]]>
+                <![CDATA[{Username=admin, Test Case=Valid data, Password=OVw3Vd@A6s}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="Add_Employee(java.util.Map)[pri:2, instance:HRM.hrm.HR_Administration@7e6ef134]" started-at="2024-06-20T18:09:10 IST" name="Add_Employee" data-provider="HRM" finished-at="2024-06-20T18:09:37 IST" duration-ms="26898" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Month=July, Test Case=Valid, First Name=Dinesh, Middle Name=kumar, Menu=Employee Management, Last Name=S}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+        <test-method signature="Add_Employee(java.util.Map)[pri:2, instance:HRM.hrm.HR_Administration@5a18cd76]" started-at="2024-06-22T19:14:57 IST" name="Add_Employee" data-provider="HRM" finished-at="2024-06-22T19:14:57 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.cssSelector: #P80850337_root > div > div > div > div > div.picker__calendar-container > div > div.dropdown.bootstrap-select.picker__select--month > button (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.62, chrome: {chromedriverVersion: 126.0.6478.62 (b2781ca4c383..., userDataDir: C:\Users\DINESH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60997/devtoo..., se:cdpVersion: 126.0.6478.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d21d425af71bca207c1d90e15d362919]]>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getLastCellNum()" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.cssSelector: #P80850337_root > div > div > div > div > div.picker__calendar-container > div > div.dropdown.bootstrap-select.picker__select--month > button (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.62, chrome: {chromedriverVersion: 126.0.6478.62 (b2781ca4c383..., userDataDir: C:\Users\DINESH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60997/devtoo..., se:cdpVersion: 126.0.6478.62, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d21d425af71bca207c1d90e15d362919
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-at HRM.hrm.HR_Administration.Add_Employee(HR_Administration.java:38)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getLastCellNum()" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:812)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:737)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:915)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
 at org.testng.TestRunner.privateRun(TestRunner.java:819)
 at org.testng.TestRunner.run(TestRunner.java:619)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
@@ -71,15 +49,23 @@ at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
 at org.testng.TestNG.runSuites(TestNG.java:1134)
 at org.testng.TestNG.run(TestNG.java:1101)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.apache.poi.xssf.usermodel.XSSFRow.getLastCellNum()" because the return value of "org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)" is null
+at HRM.hrm.Common_files.getdata(Common_files.java:47)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Add_Employee -->
-        <test-method is-config="true" signature="close()[pri:0, instance:HRM.hrm.HR_Administration@7e6ef134]" started-at="2024-06-20T18:09:37 IST" name="close" finished-at="2024-06-20T18:09:37 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="close()[pri:0, instance:HRM.hrm.HR_Administration@5a18cd76]" started-at="2024-06-22T19:14:57 IST" name="close" finished-at="2024-06-22T19:14:57 IST" duration-ms="101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

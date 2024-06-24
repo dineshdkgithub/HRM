@@ -32,7 +32,7 @@ public class Common_files {
     public static  Object[][]getdata(Method m)  throws IOException {
     	//System.out.println(" method name : " + m.getName());
     	String testcaseSheetName = ((Test) m.getAnnotation(Test.class)).testName();
-        String filePath = "C:\\excel\\HRM.xlsx";
+        String filePath = ".\\Jars\\HRM.xlsx";
         FileInputStream fis = new FileInputStream(new File(filePath));
         XSSFWorkbook workbook = new XSSFWorkbook(fis);
         int totalSheets = workbook.getNumberOfSheets();
@@ -117,6 +117,16 @@ return data;
         Actions actions = new Actions(driver);
         
         // Perform "Actions down" (simulates pressing the down arrow key)
+        actions.sendKeys(Keys.DOWN).build().perform();
+        actions.sendKeys(Keys.ENTER).build().perform();
+
+    }
+    
+    public static void enter() {
+        Actions actions = new Actions(driver);
+        
+        // Perform "Actions down" (simulates pressing the down arrow key)
+        actions.sendKeys(Keys.DOWN).build().perform();
         actions.sendKeys(Keys.DOWN).build().perform();
         actions.sendKeys(Keys.ENTER).build().perform();
 
