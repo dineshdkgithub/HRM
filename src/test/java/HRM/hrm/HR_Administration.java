@@ -52,13 +52,48 @@ public class HR_Administration extends Common_files{
 		//Month
 		driver.findElement(By.cssSelector("#P736179699_root > div > div > div > div > div.picker__calendar-container > div > div.select-wrapper.picker__select--month > input")).click();
 		Thread.sleep(500);
-		driver.findElement(By.xpath("//span[text()='"+(String)mapdata.get("Month")+"']")).click();
+		String month =(String)mapdata.get("Month");
+		String year=(String)mapdata.get("Year");
+		String bdate=(String)mapdata.get("Date");
+		String month1=(String)mapdata.get("month");
+		driver.findElement(By.xpath("//span[text()='"+month+"']")).click();
 		//Year
 		driver.findElement(By.cssSelector("#P736179699_root > div > div > div > div > div.picker__calendar-container > div > div.select-wrapper.picker__select--year > input")).click();
 		Thread.sleep(500);
-		driver.findElement(By.xpath("//span[text()='"+(String)mapdata.get("Year")+"']")).click();
+		driver.findElement(By.xpath("//span[text()='"+year+"']")).click();
+		String date1=year+"-"+month1+"-"+bdate;
 		//Date
-		driver.findElement(By.xpath("//div[@aria-label='2000-07-21']")).click();
+		driver.findElement(By.xpath("//div[@aria-label='"+date1+"']")).click();
+		//Marital Status
+		driver.findElement(By.xpath("//div[@id='emp_marital_status_inputfileddiv']//input[contains(@class, 'select-dropdown')]")).click();
+		//Select Status
+		driver.findElement(By.xpath("//span[text()='"+(String)mapdata.get("Marital Status")+"']")).click();
+		//Gender
+		driver.findElement(By.xpath("//div[@id='emp_gender_inputfileddiv']//input[contains(@class, 'select-dropdown')]")).click();
+		//select gender
+		driver.findElement(By.xpath("//span[text()='"+(String)mapdata.get("Gender")+"']")).click();
+		//Nationality
+		driver.findElement(By.xpath("//div[@id='nation_code_inputfileddiv']//input[contains(@class, 'select-dropdown')]")).click();
+		//select nation
+		driver.findElement(By.xpath("//span[text()='"+(String)mapdata.get("Nationality")+"']")).click();
+		//Driver's License Number
+		driver.findElement(By.id("licenseNo")).sendKeys((String)mapdata.get("License No"));
+		//License Expiry Date
+		driver.findElement(By.id("emp_dri_lice_exp_date")).sendKeys((String)mapdata.get("License Expiry Date"));
+		//Next button
+		driver.findElement(By.xpath("//button[text()='Next']")).click();
+		
+		
+		//Employment Details
+		//Probation End Date
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(""))).sendKeys((String)mapdata.get("Probation End Date"));
+		//Date of Permanency
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(""))).sendKeys((String)mapdata.get("Date of Permanency"));
+		//Job Title
+		driver.findElement(By.xpath("//div[@id='job_title_id']//input[contains(@class, 'placeholder dropdown-field-focus-element')]")).click();
+		//select job
+		driver.findElement(By.xpath("")).click();
+
 	}
 
 }
